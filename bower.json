@@ -12,6 +12,14 @@
     "bourbon": "~4.0.2",
     "neat": "~1.7.0",
     "normalize-opentype.css": "~0.2.3",
-    "normalize-scss": "~3.0.2"
+    "normalize-scss": "~3.0.2",
+    "respond": "latest",
+    "jquery-backstretch": "latest",
+    "html5shiv": "latest",
+    "listjs": "latest",
+    "moment": "latest",
+    "modernizr": "latest",
+    "underscore": "latest",
+    "headroom.js":"latest"
   }
-}
+}     

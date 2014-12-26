@@ -19,18 +19,32 @@ module.exports = function(grunt) {
         }]
       }
     },
+
+  concat: {
+    options: {
+      separator: ';',
+    },
+    dist: {
+      src: ['static/javascript/site.js'],
+      dest: 'static/javascript/dist/scripts.min.js',
+    },
+  },
+
     // WHEN FILES CHANGE, RUN THE ABOVE TASKS ALONG WITH BUILD
     watch: {
       sass : {
-        files: ['sass/**/*.scss'],
-        tasks: ['sass', 'build']
+        files: ['sass/**/*.scss', 'javascript/**/*.js'],
+        tasks: ['sass', 'concat', 'build'],
+         nonull: true,
       }
     }
+
   });
 
   // THIS LOADS THE TASKS WE NEED ABOVE IN FROM OUR NPM
   // Note, that we need to have these installed through the package.json file as well
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   // NEVER REMOVE THESE LINES, OR ELSE YOUR PROJECT MAY NOT WORK
   require('./options/generatorOptions.js')(grunt);

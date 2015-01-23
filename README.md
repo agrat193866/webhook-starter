@@ -9,6 +9,8 @@ cd sass
 gem install bitters
 install bitters
 
+add static/cms.css to pages/cms.html
+
 ```
 
 ``` bower update ```

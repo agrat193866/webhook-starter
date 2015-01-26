@@ -20,19 +20,37 @@ module.exports = function(grunt) {
       }
     },
  concat: {
-    options: {
-      separator: ';',
-    },
     dist: {
-      src: ['bower_components/jquery/dist/jquery.min.js','static/javascript/site.js'],
-      dest: 'static/javascript/dist/scripts.min.js',
+      src: ['bower_components/jquery/dist/jquery.min.js','bower_components/smoothstate/jquery.smoothState.js','static/javascript/site.js'],
+      dest: 'static/javascript/dist/scripts.js',
+    },
+    modernize: {
+      src: ['bower_components/html5shiv/dist/html5shiv.min.js','bower_components/respond/dest/respond.min.js'],
+      dest: 'static/javascript/modernize/modernize.min.js',
     }
   },
+
+  uglify: {
+    options: {
+      mangle: {
+        except: ['jQuery']
+      }
+    },
+    my_target: {
+      files: {
+        'static/javascript/dist/scripts.min.js': ['static/javascript/dist/scripts.js']
+      }
+    }
+  },
+
+
+
+
     // WHEN FILES CHANGE, RUN THE ABOVE TASKS ALONG WITH BUILD
     watch: {
       concat : {
         files:  'static/javascript/**/*.js',
-        tasks: ['concat', 'build'],
+        tasks: ['concat', 'uglify', 'build'],
          nonull: true,
       },
       sass : {
@@ -49,7 +67,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
-
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // NEVER REMOVE THESE LINES, OR ELSE YOUR PROJECT MAY NOT WORK
   require('./options/generatorOptions.js')(grunt);

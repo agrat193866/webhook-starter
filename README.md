@@ -7,7 +7,7 @@ Modeled from [webhook/webhook-theme-preprocessor](https://github.com/webhook/web
 ```
 cd sass
 gem install bitters
-install bitters
+bitters install
 
 add static/cms.css to pages/cms.html
 

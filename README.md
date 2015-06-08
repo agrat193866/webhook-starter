@@ -21,8 +21,8 @@ Step 5
 In your browser, Choose "Start from a theme"
 
 Step 6
-Find "Load remote theme" and add:
-```<https://github.com/budparr/webhook-starter/archive/master.zip>```
+Find "Load remote theme" and add:  
+<https://github.com/budparr/webhook-starter/archive/master.zip>
 
 Step 7    
 ```$ cd sass && gem install bitters```

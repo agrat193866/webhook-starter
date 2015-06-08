@@ -5,6 +5,8 @@ Barebones Webhook starter file to include grunt and bower components for Bourbon
 Modeled from [webhook/webhook-theme-preprocessor](https://github.com/webhook/webhook-theme-preprocessor)
 
 ```
+self-hosted - update .firebase.conf with data
+
 cd sass
 gem install bitters
 bitters install

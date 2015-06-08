@@ -29,5 +29,5 @@ Step 7
 
 ```$ bitters install```
 
-Optional
+Optional  
 add static/cms.css to pages/cms.html

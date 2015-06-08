@@ -1,13 +1,15 @@
 'use strict';
 module.exports = function(grunt) {
+
   grunt.initConfig({
     sass: {
       dev: {
         options: {
           style: 'compressed',
-          sourcemap: 'auto'
+          sourcemap: 'auto',
           // Uncomment the below line to include outside directories as well.
           // loadPath: ['location/of/other/sass']
+          includePaths: require('node-neat').includePaths
         },
         files: [{
           // Files in the /sass/ directory will go to /static/css/ when processed.
@@ -21,11 +23,11 @@ module.exports = function(grunt) {
     },
  concat: {
     dist: {
-      src: ['bower_components/jquery/dist/jquery.min.js','bower_components/smoothstate/jquery.smoothState.js','static/javascript/site.js'],
+      src: ['node_modules/jquery/dist/jquery.min.js','static/javascript/site.js'],
       dest: 'static/javascript/dist/scripts.js',
     },
     modernize: {
-      src: ['bower_components/html5shiv/dist/html5shiv.min.js','bower_components/respond/dest/respond.min.js'],
+      src: ['node_modules/html5shiv/dist/html5shiv.min.js','/node_modules/respond.js/dest/respond.min.js'],
       dest: 'static/javascript/modernize/modernize.min.js',
     }
   },
@@ -65,7 +67,7 @@ module.exports = function(grunt) {
   // THIS LOADS THE TASKS WE NEED ABOVE IN FROM OUR NPM
   // Note, that we need to have these installed through the package.json file as well
 
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 

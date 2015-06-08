@@ -4,9 +4,12 @@
 {% set base_url = getSetting('site_url') %}
 {% set slug = item.slug %}
 {% set current_url = getCurrentUrl() %}
-
-{% set canonical_url = base_url + '/' + slug %}
-{% set item_url = base_url + current_url %}
+{% if slug && base_url %}
+  {% set canonical_url = base_url + '/' + slug %}
+{% endif %}
+{% if base_url && current_url %}
+  {% set item_url = base_url + current_url %}
+{% endif %}
 
 {# GLOBAL DATA #}
 

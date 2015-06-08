@@ -1,18 +1,33 @@
-<div class="push bg"></div>
-<footer class="footer" id="content-info">
-<div class="row">
-  <div id="contact" class="footer-form">
-    {% include "templates/partials/form-contact.html" %}
-  </div>
-  <div class="footer-copy">{{ cms.about.footer_copy|safe }}</div>
-</div>
+<!--<div class="wrapper-for-content-outside-of-footer">
+   Uncomment this whole section for a sticky footer. The content of the page should be inside of this .wrapper-for-content-outside-of-footer
+</div>-->
 
-  <ul class="subfooter no-bullet small-print inline">
-      <li class="source-org vcarfd copyright">{% set now = Date() %}
-        <a href="{{site.url}}"><span class="org fn">&copy; {{ now|date('Y', '-4') }} {{ metadata.sitename }}</span></a>
-      </li>
-      <li><a href="http://sonnetmedia.net">site by sonnet media</a></li>
+<footer class="footer-2" role="contentinfo">
+  <div class="footer-logo">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
+  </div>
+    <ul>
+      <li><a href="javascript:void(0)">About</a></li>
+      <li><a href="javascript:void(0)">Contact</a></li>
+      <li><a href="javascript:void(0)">Products</a></li>
     </ul>
 
+    <div class="footer-secondary-links">
+      <ul>
+        <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+      </ul>
 
+      <ul class="footer-social">
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">
+          </a></li>
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
+        </a></li>
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="YouTube">
+        </a></li>
+      </ul>
+    </div>
 </footer>

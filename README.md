@@ -11,6 +11,8 @@ bitters install
 
 add static/cms.css to pages/cms.html
 
+npm install --save-dev html5shiv jquery node-bourbon node-neat node-sass normalize-opentype.css normalize.scss respond.js
+
 ```
 
 ``` bower update ```

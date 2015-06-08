@@ -1,3 +1,8 @@
+//in your HTML place:
+//<a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+//<div id="start-of-content" class="accessibility-aid"></div>
+
+
 .accessibility-aid {
     height: 1px;
     width: 1px;
@@ -23,4 +28,11 @@
 
 .is-stats .accessibility-aid:focus {
     top: 34px
+}
+
+
+.screen-reader-text { /* Reusable, toolbox kind of class */
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }

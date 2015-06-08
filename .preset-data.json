@@ -1,0 +1,476 @@
+{
+  "contentType": {
+    "events": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Publish Date",
+          "locked": true,
+          "name": "publish_date",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "image",
+          "hidden": false,
+          "label": "Featured Image",
+          "locked": false,
+          "name": "featured_image",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "boolean",
+          "hidden": false,
+          "label": "Show Time",
+          "locked": false,
+          "meta": {
+            "defaultValue": true,
+            "falseLabel": "Hide",
+            "trueLabel": "Show"
+          },
+          "name": "show_time",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "help": "",
+          "hidden": false,
+          "label": "Start Date",
+          "locked": false,
+          "name": "start_date",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "help": "If you put in End Date in we won't show the time of the event.",
+          "hidden": false,
+          "label": "End Date",
+          "locked": false,
+          "name": "end_date",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Venue",
+          "locked": false,
+          "name": "venue",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "address",
+          "hidden": false,
+          "label": "Address",
+          "locked": false,
+          "name": "address",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "url",
+          "hidden": false,
+          "label": "Website",
+          "locked": false,
+          "name": "website",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "wysiwyg",
+          "hidden": false,
+          "label": "Copy",
+          "locked": false,
+          "meta": {
+            "image": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
+          "name": "copy",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        }
+      ],
+      "individualMD5": "132d7d55cf05df9450d8c6369e8f9020",
+      "listMD5": "da36d71d61b688135cd50f8c301c3c4d",
+      "name": "Events",
+      "oneOff": false
+    },
+    "global": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "placeholder": "Your Name",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textarea",
+          "help": "",
+          "hidden": false,
+          "label": "Meta Description",
+          "locked": false,
+          "name": "meta_description",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "image",
+          "hidden": false,
+          "label": "Featured Image",
+          "locked": false,
+          "name": "featured_image",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "grid",
+          "controls": [
+            {
+              "controlType": "textfield",
+              "hidden": false,
+              "label": "Menu Text",
+              "locked": false,
+              "name": "menu_text",
+              "required": false,
+              "showInCms": true
+            },
+            {
+              "controlType": "relation",
+              "help": "leave blank for home page",
+              "hidden": false,
+              "label": "Page",
+              "locked": false,
+              "meta": {
+                "isSingle": true
+              },
+              "name": "page",
+              "required": false,
+              "showInCms": true
+            }
+          ],
+          "hidden": false,
+          "label": "Menu Item",
+          "locked": false,
+          "name": "menu_item",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        }
+      ],
+      "name": "-- Global --",
+      "oneOff": true,
+      "oneOffMD5": "fbee15eafe22335140363ec652c3d09d"
+    },
+    "news": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Publish Date",
+          "locked": true,
+          "name": "publish_date",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Meta Description",
+          "locked": false,
+          "name": "meta_description",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "image",
+          "hidden": false,
+          "label": "Featured Image",
+          "locked": false,
+          "name": "featured_image",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "wysiwyg",
+          "hidden": false,
+          "label": "Copy",
+          "locked": false,
+          "meta": {
+            "image": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
+          "name": "copy",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        }
+      ],
+      "individualMD5": "8370a8de1b59dcea3c70a38f908421d5",
+      "listMD5": "22d7489b568a1ad3d4f3b7c3866c82cc",
+      "name": "News",
+      "oneOff": false
+    },
+    "pages": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Publish Date",
+          "locked": true,
+          "name": "publish_date",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Meta Description",
+          "locked": false,
+          "name": "meta_description",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "image",
+          "hidden": false,
+          "label": "Featured image",
+          "locked": false,
+          "name": "featured_image",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "wysiwyg",
+          "hidden": false,
+          "label": "Copy",
+          "locked": false,
+          "meta": {
+            "image": true,
+            "link": true,
+            "quote": true,
+            "table": true,
+            "video": true
+          },
+          "name": "copy",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "layout",
+          "hidden": false,
+          "label": "Page Layout",
+          "locked": false,
+          "meta": {
+            "defaultValue": "",
+            "options": [
+              {
+                "label": "Default",
+                "value": ""
+              },
+              {
+                "label": "News & Events",
+                "value": "news-events.html"
+              }
+            ]
+          },
+          "name": "page_layout",
+          "required": false,
+          "showInCms": false
+        }
+      ],
+      "customUrls": {
+        "listUrl": "#"
+      },
+      "individualMD5": "01b2e4408ea06258f831a098f492195e",
+      "listMD5": "91cc6ade35ef15facae22cf6d300d1f7",
+      "name": "-- Pages --",
+      "oneOff": false
+    }
+    
+    
+  }
+}

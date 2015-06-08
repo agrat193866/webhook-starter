@@ -1,5 +1,5 @@
 // Using this instead of bitters' grid-settings
-@import "bower_components/neat/app/assets/stylesheets/neat-helpers"; 
+@import "neat-helpers"; 
 // Neat Overrides
 ///////////////////////////////////////////////////////////////////////////////
 // $column: 90px;
@@ -26,7 +26,7 @@ $ie-fixed-vp: em(980);    // Viewport for IE fixed width
 
 $tiny-screen-up: new-breakpoint(min-width $a-vp 4);
 $small-screen-up: new-breakpoint(min-width $b-vp 4);
-//$medium-screen-below: new-breakpoint(max-width $c-vp 4);
+$medium-screen-below: new-breakpoint(max-width $c-vp 4);
 $medium-screen-up: new-breakpoint(min-width $c-vp 4);
 
 $normal-screen-up: new-breakpoint(min-width $d-vp 4);

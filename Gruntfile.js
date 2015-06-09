@@ -20,7 +20,7 @@ module.exports = function(grunt) {
  concat: {
     dist: {
       src: ['node_modules/jquery/dist/jquery.min.js','static/javascript/site.js'],
-      dest: 'static/javascript/dist/scripts.js',
+      dest: 'static/javascript/dist/scripts-concatenated.js',
     },
     modernize: {
       src: ['node_modules/html5shiv/dist/html5shiv.min.js','/node_modules/respond.js/dest/respond.min.js'],
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
     },
     my_target: {
       files: {
-        'static/javascript/dist/scripts.min.js': ['static/javascript/dist/scripts.js']
+        'static/javascript/dist/scripts-concatenated.min.js': ['static/javascript/dist/scripts-concatenated.js']
       }
     }
   },

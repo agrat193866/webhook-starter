@@ -1,15 +1,11 @@
 'use strict';
 module.exports = function(grunt) {
-
   grunt.initConfig({
     sass: {
       dev: {
         options: {
-          style: 'compressed',
-          sourcemap: 'auto',
-          // Uncomment the below line to include outside directories as well.
-          // loadPath: ['location/of/other/sass']
-          includePaths: require('node-neat').includePaths
+          outputStyle: 'compressed',
+          includePaths: require('node-neat').includePaths  
         },
         files: [{
           // Files in the /sass/ directory will go to /static/css/ when processed.
@@ -44,10 +40,6 @@ module.exports = function(grunt) {
       }
     }
   },
-
-
-
-
     // WHEN FILES CHANGE, RUN THE ABOVE TASKS ALONG WITH BUILD
     watch: {
       concat : {

@@ -57,16 +57,16 @@
 
     </script>
   {% endif %}
-<body id="container" class="{{ template |replace('.html', '') }}{% if theme %} {{ theme }}{% endif %}{% if splash_image %} splash{% endif %}">
+<body id="container">
 <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
   {% include "templates/partials/navigation.html" %}
-  <div class="{% if splash_image %}content_splash{% endif %}">
+  
     <section class="content">
       <div id="start-of-content" class="accessibility-aid"></div>
         {% block content %}
         {% endblock %}
       </section>
-  </div>
+  
   {% include "templates/partials/footer.html" %}
   {% include "templates/partials/scripts.html" %}
 </body>

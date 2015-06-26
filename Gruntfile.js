@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
-          outputStyle: 'compressed',
+          outputStyle: 'expanded',
           includePaths: require('node-neat').includePaths  
         },
         files: [{
@@ -14,6 +14,20 @@ module.exports = function(grunt) {
           src: ['*.scss'],
           dest: 'static/css',
           ext: '.css'
+        }]
+      },
+      production: {
+        options: {
+          outputStyle: 'compressed',
+          includePaths: require('node-neat').includePaths  
+        },
+        files: [{
+          // Files in the /sass/ directory will go to /static/css/ when processed.
+          expand: true,
+          cwd: 'sass',
+          src: ['*.scss'],
+          dest: 'static/css',
+          ext: '.min.css'
         }]
       }
     },

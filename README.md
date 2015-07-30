@@ -34,6 +34,7 @@ Step 7
 
 Optional  
 add static/css/cms.css to pages/cms.html
+```<link rel="stylesheet" href="/static/css/cms.css">```
 
 
 ---

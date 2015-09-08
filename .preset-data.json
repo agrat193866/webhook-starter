@@ -1,476 +1,1141 @@
 {
-  "contentType": {
-    "events": {
-      "controls": [
-        {
-          "controlType": "textfield",
-          "hidden": false,
-          "label": "Name",
-          "locked": true,
-          "name": "name",
-          "required": true,
-          "showInCms": true
+  "articles": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "instruction",
+        "help": "DEVS - CHECK RELATIONSHIPS",
+        "hidden": false,
+        "label": "Instructions",
+        "locked": false,
+        "name": "instructions",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Meta Description",
+        "locked": false,
+        "name": "meta_description",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "relation",
+        "hidden": false,
+        "label": "Author",
+        "locked": false,
+        "meta": {
+          "contentTypeId": "staff",
+          "reverseName": "articles_author"
         },
-        {
-          "controlType": "datetime",
-          "hidden": true,
-          "label": "Create Date",
-          "locked": true,
-          "name": "create_date",
-          "required": true,
-          "showInCms": false
+        "name": "author",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "relation",
+        "hidden": false,
+        "label": "Topic",
+        "locked": false,
+        "meta": {
+          "contentTypeId": "topics",
+          "reverseName": "articles_topic"
         },
-        {
-          "controlType": "datetime",
-          "hidden": true,
-          "label": "Last Updated",
-          "locked": true,
-          "name": "last_updated",
-          "required": true,
-          "showInCms": false
+        "name": "topic",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "image",
+        "hidden": false,
+        "label": "Featured Image",
+        "locked": false,
+        "name": "featured_image",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "help": "If you want to include a link, format it as such: ```[link name](http://www.link.com)```",
+        "hidden": false,
+        "label": "Featured Image Attribution",
+        "locked": false,
+        "name": "featured_image_attribution",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "wysiwyg",
+        "hidden": false,
+        "label": "Copy",
+        "locked": false,
+        "meta": {
+          "image": true,
+          "link": true,
+          "quote": true,
+          "table": true,
+          "video": true
         },
-        {
-          "controlType": "datetime",
-          "hidden": true,
-          "label": "Publish Date",
-          "locked": true,
-          "name": "publish_date",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "image",
-          "hidden": false,
-          "label": "Featured Image",
-          "locked": false,
-          "name": "featured_image",
-          "required": false,
-          "showInCms": true
-        },
-        {
-          "controlType": "boolean",
-          "hidden": false,
-          "label": "Show Time",
-          "locked": false,
-          "meta": {
-            "defaultValue": true,
-            "falseLabel": "Hide",
-            "trueLabel": "Show"
-          },
-          "name": "show_time",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "datetime",
-          "help": "",
-          "hidden": false,
-          "label": "Start Date",
-          "locked": false,
-          "name": "start_date",
-          "required": false,
-          "showInCms": true
-        },
-        {
-          "controlType": "datetime",
-          "help": "If you put in End Date in we won't show the time of the event.",
-          "hidden": false,
-          "label": "End Date",
-          "locked": false,
-          "name": "end_date",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "textfield",
-          "hidden": false,
-          "label": "Venue",
-          "locked": false,
-          "name": "venue",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "address",
-          "hidden": false,
-          "label": "Address",
-          "locked": false,
-          "name": "address",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "url",
-          "hidden": false,
-          "label": "Website",
-          "locked": false,
-          "name": "website",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "wysiwyg",
-          "hidden": false,
-          "label": "Copy",
-          "locked": false,
-          "meta": {
-            "image": true,
-            "link": true,
-            "quote": true,
-            "table": true,
-            "video": true
-          },
-          "name": "copy",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "textfield",
-          "hidden": true,
-          "label": "Preview URL",
-          "locked": true,
-          "name": "preview_url",
-          "required": true,
-          "showInCms": false
-        },
-        {
-          "controlType": "textfield",
-          "hidden": true,
-          "label": "Slug",
-          "locked": true,
-          "name": "slug",
-          "required": false,
-          "showInCms": false
-        }
-      ],
-      "individualMD5": "132d7d55cf05df9450d8c6369e8f9020",
-      "listMD5": "da36d71d61b688135cd50f8c301c3c4d",
-      "name": "Events",
-      "oneOff": false
+        "name": "copy",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Slug",
+        "locked": true,
+        "name": "slug",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "customUrls": {
+      "listUrl": "article"
     },
-    "global": {
-      "controls": [
-        {
-          "controlType": "textfield",
-          "hidden": false,
-          "label": "Name",
-          "locked": true,
-          "name": "name",
-          "placeholder": "Your Name",
-          "required": true,
-          "showInCms": true
-        },
-        {
-          "controlType": "datetime",
-          "hidden": true,
-          "label": "Create Date",
-          "locked": true,
-          "name": "create_date",
-          "required": true,
-          "showInCms": false
-        },
-        {
-          "controlType": "datetime",
-          "hidden": true,
-          "label": "Last Updated",
-          "locked": true,
-          "name": "last_updated",
-          "required": true,
-          "showInCms": false
-        },
-        {
-          "controlType": "textarea",
-          "help": "",
-          "hidden": false,
-          "label": "Meta Description",
-          "locked": false,
-          "name": "meta_description",
-          "required": false,
-          "showInCms": true
-        },
-        {
-          "controlType": "image",
-          "hidden": false,
-          "label": "Featured Image",
-          "locked": false,
-          "name": "featured_image",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "grid",
-          "controls": [
+    "individualMD5": "9c13adef3d89fc8a003665803401323b",
+    "listMD5": "9f73e37b5abc52015155bf538437c7fa",
+    "name": "Articles",
+    "oneOff": false
+  },
+  "books": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "instruction",
+        "help": "DEVS - CHECK RELATIONSHIPS",
+        "hidden": false,
+        "label": "Instructions",
+        "locked": false,
+        "name": "instructions",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Subtitle",
+        "locked": false,
+        "name": "subtitle",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Tagline",
+        "locked": false,
+        "name": "tagline",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "select",
+        "hidden": false,
+        "label": "Genre",
+        "locked": false,
+        "meta": {
+          "defaultValue": "",
+          "options": [
             {
-              "controlType": "textfield",
-              "hidden": false,
-              "label": "Menu Text",
-              "locked": false,
-              "name": "menu_text",
-              "required": false,
-              "showInCms": true
+              "value": ""
             },
             {
-              "controlType": "relation",
-              "help": "leave blank for home page",
-              "hidden": false,
-              "label": "Page",
-              "locked": false,
-              "meta": {
-                "isSingle": true
-              },
-              "name": "page",
-              "required": false,
-              "showInCms": true
+              "value": "Fiction"
+            },
+            {
+              "value": "Nonfiction"
+            },
+            {
+              "value": "Poetry"
+            },
+            {
+              "value": "Drama"
             }
-          ],
-          "hidden": false,
-          "label": "Menu Item",
-          "locked": false,
-          "name": "menu_item",
-          "required": false,
-          "showInCms": true
+          ]
         },
-        {
-          "controlType": "textfield",
-          "hidden": true,
-          "label": "Preview URL",
-          "locked": true,
-          "name": "preview_url",
-          "required": true,
-          "showInCms": false
-        },
-        {
-          "controlType": "textfield",
-          "hidden": true,
-          "label": "Slug",
-          "locked": true,
-          "name": "slug",
-          "required": false,
-          "showInCms": false
-        }
-      ],
-      "name": "-- Global --",
-      "oneOff": true,
-      "oneOffMD5": "fbee15eafe22335140363ec652c3d09d"
-    },
-    "news": {
-      "controls": [
-        {
-          "controlType": "textfield",
-          "hidden": false,
-          "label": "Name",
-          "locked": true,
-          "name": "name",
-          "required": true,
-          "showInCms": true
-        },
-        {
-          "controlType": "datetime",
-          "hidden": true,
-          "label": "Create Date",
-          "locked": true,
-          "name": "create_date",
-          "required": true,
-          "showInCms": false
-        },
-        {
-          "controlType": "datetime",
-          "hidden": true,
-          "label": "Last Updated",
-          "locked": true,
-          "name": "last_updated",
-          "required": true,
-          "showInCms": false
-        },
-        {
-          "controlType": "datetime",
-          "hidden": true,
-          "label": "Publish Date",
-          "locked": true,
-          "name": "publish_date",
-          "required": false,
-          "showInCms": true
-        },
-        {
-          "controlType": "textfield",
-          "hidden": false,
-          "label": "Meta Description",
-          "locked": false,
-          "name": "meta_description",
-          "required": false,
-          "showInCms": true
-        },
-        {
-          "controlType": "image",
-          "hidden": false,
-          "label": "Featured Image",
-          "locked": false,
-          "name": "featured_image",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "wysiwyg",
-          "hidden": false,
-          "label": "Copy",
-          "locked": false,
-          "meta": {
-            "image": true,
-            "link": true,
-            "quote": true,
-            "table": true,
-            "video": true
-          },
-          "name": "copy",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "textfield",
-          "hidden": true,
-          "label": "Preview URL",
-          "locked": true,
-          "name": "preview_url",
-          "required": true,
-          "showInCms": false
-        },
-        {
-          "controlType": "textfield",
-          "hidden": true,
-          "label": "Slug",
-          "locked": true,
-          "name": "slug",
-          "required": false,
-          "showInCms": false
-        }
-      ],
-      "individualMD5": "8370a8de1b59dcea3c70a38f908421d5",
-      "listMD5": "22d7489b568a1ad3d4f3b7c3866c82cc",
-      "name": "News",
-      "oneOff": false
-    },
-    "pages": {
-      "controls": [
-        {
-          "controlType": "textfield",
-          "hidden": false,
-          "label": "Name",
-          "locked": true,
-          "name": "name",
-          "required": true,
-          "showInCms": true
-        },
-        {
-          "controlType": "datetime",
-          "hidden": true,
-          "label": "Create Date",
-          "locked": true,
-          "name": "create_date",
-          "required": true,
-          "showInCms": false
-        },
-        {
-          "controlType": "datetime",
-          "hidden": true,
-          "label": "Last Updated",
-          "locked": true,
-          "name": "last_updated",
-          "required": true,
-          "showInCms": true
-        },
-        {
-          "controlType": "datetime",
-          "hidden": true,
-          "label": "Publish Date",
-          "locked": true,
-          "name": "publish_date",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "textfield",
-          "hidden": false,
-          "label": "Meta Description",
-          "locked": false,
-          "name": "meta_description",
-          "required": false,
-          "showInCms": true
-        },
-        {
-          "controlType": "image",
-          "hidden": false,
-          "label": "Featured image",
-          "locked": false,
-          "name": "featured_image",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "wysiwyg",
-          "hidden": false,
-          "label": "Copy",
-          "locked": false,
-          "meta": {
-            "image": true,
-            "link": true,
-            "quote": true,
-            "table": true,
-            "video": true
-          },
-          "name": "copy",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "textfield",
-          "hidden": true,
-          "label": "Preview URL",
-          "locked": true,
-          "name": "preview_url",
-          "required": true,
-          "showInCms": false
-        },
-        {
-          "controlType": "textfield",
-          "hidden": true,
-          "label": "Slug",
-          "locked": true,
-          "name": "slug",
-          "required": false,
-          "showInCms": false
-        },
-        {
-          "controlType": "layout",
-          "hidden": false,
-          "label": "Page Layout",
-          "locked": false,
-          "meta": {
-            "defaultValue": "",
-            "options": [
-              {
-                "label": "Default",
-                "value": ""
-              },
-              {
-                "label": "News & Events",
-                "value": "news-events.html"
-              }
-            ]
-          },
-          "name": "page_layout",
-          "required": false,
-          "showInCms": false
-        }
-      ],
-      "customUrls": {
-        "listUrl": "#"
+        "name": "genre",
+        "required": false,
+        "showInCms": false
       },
-      "individualMD5": "01b2e4408ea06258f831a098f492195e",
-      "listMD5": "91cc6ade35ef15facae22cf6d300d1f7",
-      "name": "-- Pages --",
-      "oneOff": false
-    }
-    
-    
+      {
+        "controlType": "grid",
+        "controls": [
+          {
+            "controlType": "select",
+            "hidden": false,
+            "label": "Type",
+            "locked": false,
+            "meta": {
+              "defaultValue": "",
+              "options": [
+                {
+                  "value": ""
+                },
+                {
+                  "value": "Paperback"
+                },
+                {
+                  "value": "Clothbound"
+                },
+                {
+                  "value": "Ebook"
+                }
+              ]
+            },
+            "name": "type",
+            "required": false,
+            "showInCms": true
+          },
+          {
+            "controlType": "image",
+            "hidden": false,
+            "label": "Cover Image",
+            "locked": false,
+            "name": "cover_image",
+            "required": false,
+            "showInCms": true
+          },
+          {
+            "controlType": "textfield",
+            "hidden": false,
+            "label": "Publisher",
+            "locked": false,
+            "name": "publisher",
+            "required": false,
+            "showInCms": true
+          },
+          {
+            "controlType": "textfield",
+            "hidden": false,
+            "label": "ISBN",
+            "locked": false,
+            "name": "isbn",
+            "required": false,
+            "showInCms": false
+          },
+          {
+            "controlType": "datetime",
+            "hidden": false,
+            "label": "Publication Date",
+            "locked": false,
+            "meta": {
+              "hideTime": true
+            },
+            "name": "publication_date",
+            "required": false,
+            "showInCms": false
+          }
+        ],
+        "hidden": false,
+        "label": "Editions",
+        "locked": false,
+        "name": "editions",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "wysiwyg",
+        "hidden": false,
+        "label": "Synopsis",
+        "locked": false,
+        "meta": {
+          "image": true,
+          "javascript": false,
+          "link": true,
+          "quote": true,
+          "table": false,
+          "video": true
+        },
+        "name": "synopsis",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "wysiwyg",
+        "hidden": false,
+        "label": "Excerpt",
+        "locked": false,
+        "meta": {
+          "image": true,
+          "javascript": false,
+          "link": false,
+          "quote": true,
+          "table": false,
+          "video": false
+        },
+        "name": "excerpt",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "relation",
+        "hidden": false,
+        "label": "Reviews (Related Book)",
+        "locked": false,
+        "meta": {
+          "contentTypeId": "reviews",
+          "reverseName": "related_book"
+        },
+        "name": "reviews_related_book",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Slug",
+        "locked": true,
+        "name": "slug",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "customUrls": {
+      "listUrl": "book"
+    },
+    "individualMD5": "8256c645cfb583501848dc8af95df4b8",
+    "listMD5": "9141fd8ab48472cc627dd8d949ce7b64",
+    "name": "Books",
+    "oneOff": false
+  },
+  "events": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "image",
+        "hidden": false,
+        "label": "Featured Image",
+        "locked": false,
+        "name": "featured_image",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "help": "",
+        "hidden": false,
+        "label": "Start Date",
+        "locked": false,
+        "name": "start_date",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "help": "If you put in End Date in we won't show the time of the event.",
+        "hidden": false,
+        "label": "End Date",
+        "locked": false,
+        "meta": {
+          "hideTime": true
+        },
+        "name": "end_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Venue",
+        "locked": false,
+        "name": "venue",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "address",
+        "hidden": false,
+        "label": "Address",
+        "locked": false,
+        "name": "address",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "url",
+        "hidden": false,
+        "label": "Website",
+        "locked": false,
+        "name": "website",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "wysiwyg",
+        "hidden": false,
+        "label": "Copy",
+        "locked": false,
+        "meta": {
+          "image": true,
+          "link": true,
+          "quote": true,
+          "table": true,
+          "video": true
+        },
+        "name": "copy",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "relation",
+        "hidden": false,
+        "label": "Program",
+        "locked": false,
+        "meta": {
+          "contentTypeId": "programs",
+          "isSingle": true,
+          "reverseName": "events_program"
+        },
+        "name": "program",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "grid",
+        "controls": [
+          {
+            "controlType": "textfield",
+            "hidden": false,
+            "label": "Name",
+            "locked": false,
+            "name": "name",
+            "required": false,
+            "showInCms": true
+          },
+          {
+            "controlType": "textfield",
+            "hidden": false,
+            "label": "Venue",
+            "locked": false,
+            "name": "venue",
+            "required": false,
+            "showInCms": false
+          },
+          {
+            "controlType": "image",
+            "hidden": false,
+            "label": "Image",
+            "locked": false,
+            "name": "image",
+            "required": false,
+            "showInCms": true
+          },
+          {
+            "controlType": "datetime",
+            "hidden": false,
+            "label": "Start",
+            "locked": false,
+            "name": "start",
+            "required": false,
+            "showInCms": true
+          },
+          {
+            "controlType": "wysiwyg",
+            "hidden": false,
+            "label": "Copy",
+            "locked": false,
+            "meta": {
+              "image": true,
+              "javascript": false,
+              "link": true,
+              "quote": true,
+              "table": false,
+              "video": true
+            },
+            "name": "copy",
+            "required": false,
+            "showInCms": false
+          }
+        ],
+        "hidden": false,
+        "label": "Sub Events",
+        "locked": false,
+        "name": "sub_events",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Slug",
+        "locked": true,
+        "name": "slug",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "customUrls": {
+      "listUrl": "event"
+    },
+    "individualMD5": "132d7d55cf05df9450d8c6369e8f9020",
+    "listMD5": "da36d71d61b688135cd50f8c301c3c4d",
+    "name": "Events",
+    "oneOff": false
+  },
+  "global": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "placeholder": "Your Name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textarea",
+        "help": "",
+        "hidden": false,
+        "label": "Meta Description",
+        "locked": false,
+        "name": "meta_description",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Slug",
+        "locked": true,
+        "name": "slug",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "name": "-- Global --",
+    "oneOff": true,
+    "oneOffMD5": "f47e90bb0516f0e4828a945bea423a3e"
+  },
+  "pages": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Meta Description",
+        "locked": false,
+        "name": "meta_description",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "image",
+        "hidden": false,
+        "label": "Featured image",
+        "locked": false,
+        "name": "featured_image",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "help": "If you want to include a link, format it as such: ```[link name](http://www.link.com)```",
+        "hidden": false,
+        "label": "Featured Image Attribution",
+        "locked": false,
+        "name": "featured_image_attribution",
+        "placeholder": "",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "wysiwyg",
+        "hidden": false,
+        "label": "Copy",
+        "locked": false,
+        "meta": {
+          "image": true,
+          "link": true,
+          "quote": true,
+          "table": true,
+          "video": true
+        },
+        "name": "copy",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Slug",
+        "locked": true,
+        "name": "slug",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "layout",
+        "hidden": false,
+        "label": "Page Layout",
+        "locked": false,
+        "meta": {
+          "defaultValue": "",
+          "options": [
+            {
+              "label": "Default",
+              "value": ""
+            },
+            {
+              "label": "News & Events",
+              "value": "news-events.html"
+            }
+          ]
+        },
+        "name": "page_layout",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "individualMD5": "01b2e4408ea06258f831a098f492195e",
+    "listMD5": "91cc6ade35ef15facae22cf6d300d1f7",
+    "name": "Pages",
+    "oneOff": false
+  },
+  "programs": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "relation",
+        "hidden": false,
+        "label": "Events (Program)",
+        "locked": false,
+        "meta": {
+          "contentTypeId": "events",
+          "reverseName": "program"
+        },
+        "name": "events_program",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "individualMD5": "d353628fdffca21e953c7eeb572fe9e0",
+    "listMD5": "b2d4e4e5bb952119d6e72fd5e15d3850",
+    "name": "Programs",
+    "oneOff": false
+  },
+  "reviews": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "instruction",
+        "help": "DEVS - CHECK RELATIONSHIPS",
+        "hidden": false,
+        "label": "Instructions",
+        "locked": false,
+        "name": "instructions",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textarea",
+        "hidden": false,
+        "label": "Excerpt",
+        "locked": false,
+        "name": "excerpt",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "textfield",
+        "help": "put an asterisk around any word you want in ```*italics*```",
+        "hidden": false,
+        "label": "Source",
+        "locked": false,
+        "name": "source",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "wysiwyg",
+        "hidden": false,
+        "label": "Copy",
+        "locked": false,
+        "meta": {
+          "image": true,
+          "javascript": true,
+          "link": true,
+          "quote": true,
+          "table": true,
+          "video": true
+        },
+        "name": "copy",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "relation",
+        "hidden": false,
+        "label": "Related Book",
+        "locked": false,
+        "meta": {
+          "contentTypeId": "books",
+          "isSingle": true,
+          "reverseName": "reviews_related_book"
+        },
+        "name": "related_book",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "individualMD5": "d2bc020d3a329b208ff7a0e32c0b465d",
+    "listMD5": "da1792da2fe6bd0189928c4290d42830",
+    "name": "Reviews",
+    "oneOff": false
+  },
+  "staff": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "instruction",
+        "help": "DEVS - CHECK RELATIONSHIPS",
+        "hidden": false,
+        "label": "Instructions",
+        "locked": false,
+        "name": "instructions",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "image",
+        "hidden": false,
+        "label": "Image",
+        "locked": false,
+        "name": "image",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "textfield",
+        "help": "If you want to include a link, format it as such: ```[link name](http://www.link.com)```",
+        "hidden": false,
+        "label": "Image Attribution",
+        "locked": false,
+        "name": "image_attribution",
+        "required": false,
+        "showInCms": true
+      },
+      {
+        "controlType": "wysiwyg",
+        "hidden": false,
+        "label": "Copy",
+        "locked": false,
+        "meta": {
+          "image": true,
+          "javascript": false,
+          "link": true,
+          "quote": true,
+          "table": false,
+          "video": true
+        },
+        "name": "copy",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "relation",
+        "hidden": false,
+        "label": "Articles (Author)",
+        "locked": false,
+        "meta": {
+          "contentTypeId": "articles",
+          "reverseName": "author"
+        },
+        "name": "articles_author",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Preview URL",
+        "locked": true,
+        "name": "preview_url",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "textfield",
+        "hidden": true,
+        "label": "Slug",
+        "locked": true,
+        "name": "slug",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "individualMD5": "ca0a3998fa248973d253de0a1d19843f",
+    "listMD5": "2fbd307d6b2270d19625f73a182f38c6",
+    "name": "Staff",
+    "oneOff": false
+  },
+  "topics": {
+    "controls": [
+      {
+        "controlType": "textfield",
+        "hidden": false,
+        "label": "Name",
+        "locked": true,
+        "name": "name",
+        "required": true,
+        "showInCms": true
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Create Date",
+        "locked": true,
+        "name": "create_date",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Last Updated",
+        "locked": true,
+        "name": "last_updated",
+        "required": true,
+        "showInCms": false
+      },
+      {
+        "controlType": "datetime",
+        "hidden": true,
+        "label": "Publish Date",
+        "locked": true,
+        "name": "publish_date",
+        "required": false,
+        "showInCms": false
+      },
+      {
+        "controlType": "relation",
+        "hidden": false,
+        "label": "Articles (Topic)",
+        "locked": false,
+        "meta": {
+          "contentTypeId": "articles",
+          "reverseName": "topic"
+        },
+        "name": "articles_topic",
+        "required": false,
+        "showInCms": false
+      }
+    ],
+    "individualMD5": "7dd126d6ae4b83942fca16575879f908",
+    "listMD5": "f7caf7483ee3105b075626d7d39051a5",
+    "name": "Topics",
+    "oneOff": false
   }
 }

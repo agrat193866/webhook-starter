@@ -27,7 +27,7 @@ In your browser, load <http://localhost:2002/> and click on "Looking for the CMS
 Find "Load remote theme" and add:  
 <https://github.com/budparr/webhook-starter/archive/master.zip>
 
-Step 7    
+Step 7  ONLY IF YOU WANT TO OVERWRITE OUR BASE FILES  
 ```$ cd sass && gem install bitters```
 
 ```$ bitters install```
@@ -39,6 +39,6 @@ add static/css/cms.css to pages/cms.html
 
 ---
 
-TODO: 
+TODO:
 Refine content sections  
 Refine theme initial layout (fork to a theme)

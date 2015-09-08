@@ -3,16 +3,17 @@
   "node_modules/normalize.scss/normalize",
   "node_modules/normalize-opentype.css/normalize-opentype",
   "bourbon",
-  "modules/grid-settings",//overrides bitters grid-settings
+  "base/grid-settings",//overrides bitters grid-settings
   "neat",
   "base/base", 
-  "base/variables"; 
+  "base/variables",
+  "modules/layouts",
+  "modules/mixins";
 
 // Modules
 @import
   "modules/articles",
-  "modules/footer",
-  "modules/layouts",
+  "modules/footer",  
   "modules/nav-top",
   "modules/utilities-accessibility",
   "modules/utilities-iframes",

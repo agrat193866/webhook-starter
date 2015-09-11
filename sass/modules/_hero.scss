@@ -32,7 +32,7 @@
         font-size: 1.6em;
         margin-bottom: 0.5em;
 
-        @include media($large-screen) {
+        @include media($lg) {
           font-size: 1.8em;
         }
       }
@@ -42,7 +42,7 @@
         line-height: 1.4em;
         margin: 0 auto 3em auto; 
 
-        @include media($large-screen) {
+        @include media($lg) {
           font-size: 1.1em;
           max-width: 40%;
         }

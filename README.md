@@ -27,7 +27,7 @@ How to use it:
 
 2. `cd <sitename>`
 
-3. `$ npm install --save-dev grunt-sass grunt-contrib-concat grunt-contrib-uglify jquery node-bourbon node-neat node-sass normalize.scss normalize-opentype.css enquire.js html5shiv respond.js`
+3. `$ npm install --save-dev grunt-sass grunt-autoprefixer grunt-browser-sync grunt-contrib-concat grunt-contrib-uglify jquery node-bourbon node-neat node-sass normalize.scss normalize-opentype.css enquire.js html5shiv respond.js`
 
 4. `wh serve`
 

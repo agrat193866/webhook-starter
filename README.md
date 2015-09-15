@@ -13,6 +13,7 @@ What this Theme does:
 * includes `enquire.js` for javascript media queries
 * includes hot-key to toggle the `visual-grid`
 * includes sensible, customizable, mobile-first `neat` breakpoints
+* includes a CNAME file in the pages directory (gets written to root) to create a subdomain for staging the project on https://surge.sh/
 
 How to use it:
 

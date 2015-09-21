@@ -1,2 +1,2 @@
 User-Agent: *
-Disallow: /cms/
+Disallow:{% if getSetting('analytics_id')  %} /cms/{% else %} / {% endif %}
